@@ -12,5 +12,7 @@ public class PublicationTester {
         // no need for getters and setters
 
         // make a few Publication objects
+//        Publication p1 = new Publication();
+//        System.out.println(p1);
     }
 }
