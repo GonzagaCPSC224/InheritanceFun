@@ -28,5 +28,24 @@ public class PublicationTester {
         // task: define a Magazine class that inherits from Publication
         // a Magazine has a publication frequency (e.g. weekly, monthly, ...)
         // toString(), generateCopyright(), DVC, EVC
+        Magazine m1 = new Magazine();
+        System.out.println(m1);
+
+        // lets declare an array of Publication references (not objects!!)
+        Publication[] pubs = new Publication[4];
+        pubs[0] = b1;
+        pubs[1] = p1;
+        pubs[2] = b2;
+        pubs[3] = m1;
+
+        for (Publication pub : pubs) {
+            // at runtime pub is dynamically bound (dynamic binding) to an
+            // actual Magazine or Book object
+            System.out.println(pub);
+            System.out.println(pub.getClass());
+            System.out.println(pub.hashCode());
+            System.out.println(pub.generateCopyright());
+            System.out.println("*****************************");
+        }
     }
 }
