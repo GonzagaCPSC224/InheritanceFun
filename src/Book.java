@@ -16,4 +16,19 @@ public class Book extends Publication {
         super(title, publisher, numPages, price); // EVC of the super class
         this.author = author;
     }
+
+    public Book(String author) {
+        // java calls Publication's DVC for us
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", " + author; // DRY: don't repeat yourself
+    }
+
+    @Override
+    public String generateCopyright() {
+        return "TODO: generate Book's copyright...";
+    }
 }

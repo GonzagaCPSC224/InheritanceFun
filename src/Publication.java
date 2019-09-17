@@ -32,5 +32,8 @@ public abstract class Publication extends Object {
         return title + ", " + publisher + ", " + numPages + ", " + price;
     }
 
+    // abstract method
+    // that a subclass has to provide an implementation for (unless the subclass is abstract)
+    public abstract String generateCopyright();
 
 }

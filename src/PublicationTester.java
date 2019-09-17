@@ -14,5 +14,19 @@ public class PublicationTester {
         // make a few Publication objects
 //        Publication p1 = new Publication();
 //        System.out.println(p1);
+
+        Book b1 = new Book();
+        System.out.println(b1);
+        Book b2 = new Book("some author");
+        System.out.println(b2);
+
+        Publication p1 = b1;
+        System.out.println(p1);
+        // polymorphism: same code, different behavior
+        System.out.println(p1.generateCopyright());
+
+        // task: define a Magazine class that inherits from Publication
+        // a Magazine has a publication frequency (e.g. weekly, monthly, ...)
+        // toString(), generateCopyright(), DVC, EVC
     }
 }
